@@ -26,7 +26,7 @@
                         <li><a class="menu-nav link" href="">Contacts</a></li>
                     </ul>
                 </nav>
-                <button type="button" class="open-mobile">
+                <button type="button" class="open-mobile js-open-menu">
                     <svg class="open-mobile-button" height="22" width="32">
                         <use href="./images/icons.svg#icon-mobile-menu"></use>
                     </svg>
@@ -38,16 +38,67 @@
                     </ul>
                 </address>
                 </div>
+<!--------------------------------------------------------------------HEADER 2--------------------------------------------------------------------->
+                <div class="contrainer menu-mobile js-menu-container">
+                    <button class="menu-mobile-but js-close-menu">
+                        <svg class="menu-mobile-but-icon" height="8" width="8">
+                            <use href="./images/icons.svg#icon-close-button-mobile"></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile-links list">
+                        <li><a class="menu-nav studio-head link" href="./index.html">Studio</a></li>
+                        <li><a class="menu-nav link" href="./portfolio.html">Portfolio</a></li>
+                        <li><a class="menu-nav link" href="">Contacts</a></li>
+                    </ul>
+                    <address>
+                        <ul class="mobile-nav list">
+                            <li><a class="nav-mobile-phone link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                            <li><a class="nav-mobile-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                        </ul>
+                    </address>
+                    <div>
+                        <ul class="mobile-list list">
+                            <li class="social-list">
+                                <a href="" class="social-list-link">
+                                    <svg class="social-link-item" aria-label="icon instagram" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-list">
+                                <a href="" class="social-list-link">
+                                    <svg class="social-link-item" aria-label="icon twitter" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-list">
+                                <a href="" class="social-list-link">
+                                    <svg class="social-link-item" aria-label="icon facebook" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-list">
+                                <a href="" class="social-list-link">
+                                    <svg class="social-link-item" aria-label="icon linkedin" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
         </header>
 <!---------------------------------------------------------/HEADER-------------------------------------------------------------->
 <!----------------------------------------------------------MAINSTUDIO1-------------------------------------------------------------->
-    <!-- <main>
+    <main>
         <section class="first-sect">
             <div class="container">
                 <h1 class="first-h">Effective Solutions for Your Business</h1>
                 <button class="order" type="button" data-modal-open>Order Service</button>
             </div>
-        </section> -->
+        </section>
 <!----------------------------------------------------------/MAINSTUDIO1-------------------------------------------------------------->
 <!----------------------------------------------------------MAINSTUDIO2-------------------------------------------------------------->
         <!-- <section class="second-sect">
@@ -390,7 +441,7 @@
     </footer> -->
 <!--------------------------------------------------------/FOOTER-------------------------------------------------------------->
 <!----------------------------------------------------------BACKDROP-------------------------------------------------------------->
-<!-- <div class="backdrop is-hidden" data-modal>
+<div class="backdrop is-hidden" data-modal>
     <div class="modal">
         <button type="button" class="modal-button" data-modal-close>
             <svg class="close-button" aria-label="close icon" width="8" height="8">
@@ -447,8 +498,9 @@
                         <button class="confirm-button" type="submit">Send</button>
                 </form>
     </div>
-</div> -->
+</div>
 <!----------------------------------------------------------/BACKDROP-------------------------------------------------------------->
- <!-- <script src="./js/modal.js"></script>  -->
+ <script src="./js/modal.js"></script> 
+<script src="./js/mobile-menu.js"></script>
 </body>
 </html>
