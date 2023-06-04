@@ -441,6 +441,12 @@ font-family: 'Roboto';
 }
 /* =================================== /MAIN STUDIO 1 ====================================== */
 /* =================================== MAIN STUDIO 2 ======================================= */
+.second-sect {
+    padding: 96px 0 0;
+}
+.advantages-img{
+    display: none;
+}
 .second-h {
     font-weight: 700;
     font-size: 36px;
@@ -449,11 +455,81 @@ font-family: 'Roboto';
     text-transform: capitalize;
     letter-spacing: 0.02em;
     color: var(--first-color);
-}
-.h-marsec {
     margin-bottom: 72px;
 }
 
+.list-advantages{
+font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    /* text-transform: capitalize; */
+    color: var(--first-color);
+    margin-bottom: 8px;
+}
+.list-advantages-text{
+font-family: 'Roboto';
+    font-size: 16px;
+    line-height:1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 72px;
+    /* text-transform: capitalize; */
+}
+
+@media screen and (min-width: 768px) {
+    .advantages {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 24px;
+            row-gap: 72px;
+        }
+
+    .list-advantages{
+        text-align: left;
+    }
+    .list-advantages-text{
+        margin-bottom: 0px;
+        }
+
+    .advantages-item {
+        flex-basis: calc((100% - 32px) / 2);
+    }
+
+    .second-sect {
+        padding: 96px 0;
+        }
+}
+
+@media screen and (max-width:1157px) {
+    .list-advantages-text{
+        font-weight: 500;
+    }
+    
+}
+
+@media screen and (min-width: 1158px) {
+
+    .second-sect {
+            padding: 120px 0;
+        }
+
+    .advantages {
+        display: flex;
+        column-gap: 24px;
+        flex-wrap: nowrap;
+        row-gap: 0;
+    }
+
+.list-advantages {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--first-color);
+    margin-bottom: 8px;
+} 
 .advantages-img {
     width: 264px;
     height: 112px;
@@ -465,27 +541,11 @@ font-family: 'Roboto';
     margin-bottom: 8px;
 }
 
-.second-sect {
-    padding: 120px 0;
-}
 
 .advantages-item {
     width: calc((100% - 72px) / 4)
 }
 
-.advantages {
-    display: flex;
-    gap: 24px;
-}
-
-.list-advantages{
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: var(--first-color);
-        margin-bottom: 8px;
-}
 
 .list-advantages-text {
         font-size: 16px;
@@ -493,9 +553,19 @@ font-family: 'Roboto';
         letter-spacing: 0.02em;
         color: var(--third-color);
 } 
+}
 /* =================================== /MAIN STUDIO 2 ====================================== */
 /* =================================== MAIN STUDIO 3 ======================================= */
-.third-sect-container{
+
+@media screen and (max-width:1158px) {
+    .third-sect{
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width:1158px) { 
+     .third-sect-container{
 gap: 72px;
 }
 
@@ -510,46 +580,61 @@ gap: 72px;
 .first-photos-studio {
     width: calc((100% - 48px)/3);
 }
-/* =================================== /MAIN STUDIO 3 ====================================== */
-/* =================================== MAIN STUDIO 4 ======================================= */
-.forth-sect {
-    background-color: var(--second-color);
-    padding: 120px 0;
-}
 
-.employeers {
-display: flex;
-justify-content: center;
-gap: 24px;
+.h-marsec {
+    margin-bottom: 72px;
+}
+}
+/* =================================== /MAIN STUDIO 3 ====================================== */ 
+/* =================================== MAIN STUDIO 4 ======================================= */
+.forth-sect{
+    background-color: var(--second-color);
+    padding: 96px 0;
 }
 
 .inf-work{
     background-color: var(--fourth-color);
-    width: calc((100% - 72px)/4);
     border-radius: 0px 0px 4px 4px;
     box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.worker{
+.worker {
     padding: 32px 0;
 }
+
+.employeers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+}
+
 .name-worker {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: var(--first-color);
-        text-align: center;
-        margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--first-color);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.position {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--third-color);
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .social {
     display: flex;
     justify-content: center;
     gap: 24px;
-}
+} 
 
 .social-list-link{
     background-color: var(--sixth-color);
@@ -560,6 +645,10 @@ gap: 24px;
     width: 40px;
     height: 40px;
     transition: background-color var(--transition-duration-and-function);
+} 
+
+.social-link-item {
+    fill: var(--second-color);
 }
 
 .social-list-link:hover,
@@ -567,52 +656,61 @@ gap: 24px;
 background-color: var(--fifth-color);
 }
 
-.social-link-item{
-    fill: var(--second-color);
+
+@media screen and (min-width: 768px) {
+    .employeers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 24px;
+    row-gap: 64px;
+    }
+    
+    .inf-work{
+    max-width: 552px;
+    }
 }
 
-.position {
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color:var(--third-color); 
-        text-align: center;
-        margin-bottom: 8px;
-}
+@media screen and (min-width: 1158px) {
+    .employeers {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: nowrap;
+        }
 
-.icon-com {
-    background-color:var(--second-color)
+    .forth-sect {
+        padding: 120px 0;
+}
 }
 /* =================================== /MAIN STUDIO 4 ====================================== */
 /* =================================== MAIN STUDIO 5 ====================================== */
-.fifth-sect {
-    padding: 120px 0;
-}
 
-.h-marg {
-    margin-bottom: 72px
+.fifth-sect {
+    padding: 96px 0;
 }
 
 .companies {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 72px;
 }
 
-
 .companies-icons {
-    width: calc((100% - 120px) / 6);
     height: 88px;
+    flex-basis: calc((100% - 16px) / 2)
 }
 
 .icon-link:hover,
-.icon-link:focus{
-border-color: var(--fifth-color);
+.icon-link:focus {
+    border-color: var(--fifth-color);
     color: var(--fifth-color);
-}
-
-.icon-comp {
-    fill: currentColor;
 }
 
 .icon-link {
@@ -627,7 +725,32 @@ border-color: var(--fifth-color);
     transition: border-color var(--transition-duration-and-function), color var(--transition-duration-and-function);
 }
 
+.icon-comp {
+    fill: currentColor;
+}
 
+@media screen and (min-width: 768px) {
+    .companies-icons {
+            max-width: 190px;
+        }
+    
+}
+
+@media screen and (min-width: 1158px) {
+.fifth-sect {
+        padding: 120px 0;
+    }
+
+
+    .companies-icons {
+        max-width: 160px;
+        height: 88px;
+    }
+    
+    .companies{
+        flex-wrap: nowrap;
+    }
+}
 
 /* =================================== /MAIN STUDIO 5 ====================================== */
 /* =================================== MAIN PORTFOLIO ====================================== */
@@ -738,43 +861,32 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 /* =================================== /MAIN PORTFOLIO ==================================== */
 /* =================================== FOOTER ============================================= */
-.logo-first{
-    color: var(--first-color);
+.last-step{
+    padding: 96px 0;
+    background-color: var(--first-color);
 }
 
-.last-step{
-    background-color: var(--first-color);
-    padding-top: 100px;
-    padding-bottom: 100px;
+.logo-first{
+    color: var(--first-color);
+} 
+.left-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-logo {
-margin-bottom: 16px;
-display: inline-block;
+    margin-bottom: 16px;
+    display:inline-block;
 }
 
-.left-side {
-    margin-right: 120px;
-}
-.two-sides {
-    display: flex;
-    align-items: baseline;
-}
-
-.last-social {
-    display: flex;
-    gap: 16px;
-}
-.logo-text{
-        width: 264px;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: var(--second-color);
-}
-
-.right-site{
-    margin-right: 80px;
+.logo-text {
+    width: 264px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--second-color);
+    margin-bottom: 72px;
 }
 
 .footer-h {
@@ -785,6 +897,14 @@ display: inline-block;
     letter-spacing: 0.02em;
     color: var(--fourth-color);
     margin-bottom: 16px;
+    text-align: center;
+}
+
+.last-social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 72px;
 }
 
 .footer-social-list-link {
@@ -800,16 +920,36 @@ display: inline-block;
 }
 
 .footer-social-list-link:hover,
-.footer-social-list-link:focus{
+.footer-social-list-link:focus {
     background-color: var(--ninth-color)
 }
 
-.subs-button{
+.footer-label {
+    margin-right: 24px;
+}
+
+.footer-mail {
+    width: 398px;
+    height: 40px;
+    padding: 8px 16px;
+    border: 1px solid var(--fourth-color);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--fourth-color);
+    font-family: 'Roboto';
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.subs-button {
     min-width: 165px;
     height: 40px;
     padding: 8px 24px;
     border-radius: 4px;
-    border:none;
+    border: none;
     background-color: var(--sixth-color);
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -823,6 +963,8 @@ display: inline-block;
     letter-spacing: 0.04em;
     color: var(--fourth-color);
     transition: background-color var(--transition-duration-and-function);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .subs-icon {
@@ -830,36 +972,93 @@ display: inline-block;
 }
 
 .subs-button:hover,
-.subs-button:focus{
+.subs-button:focus {
     background-color: var(--fifth-color);
 }
-.footer-form{
+
+.footer-mail::placeholder {
+    color: var(--fourth-color)
+}
+
+@media screen and (min-width:768px) {
+    .footer-mail {
+            width: 264px;
+            display: inline-block;
+        }
+    .two-sides{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 72px;
+        column-gap: 24px;
+        align-items: top;
+        max-width: 552px;
+    }
+
+        .footer-h {
+        text-align: left;
+    }
+
+
+        .left-side {
+        display: block;
+    }
+
+        .footer-h{
+            display: block;
+        }
+
+        .subs-button{
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .footer-form {
+            display: flex;
+        }
+
+        .logo-text{
+            margin-bottom: 0;
+        }
+
+        .last-social{
+            margin-bottom: 0;
+        }
+
+                .footer-form {
+            display: flex;
+            flex-direction: row;
+         }
+}
+
+@media screen and (min-width: 1158px) {
+    
+
+
+.last-step{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.left-side {
+    margin-right: 120px;
+}
+.two-sides {
     display: flex;
-    flex-direction: row;
+    align-items: baseline;
+    max-width: 1158px;
+    flex-wrap: nowrap;
+    row-gap: 0;
+    column-gap: 0;
+}
+
+.right-site{
+    margin-right: 80px;
 }
 
 .footer-label {
     margin-right: 24px;
 }
-.footer-mail{
-    width: 264px;
-    height: 40px;
-    padding: 8px 16px;
-    border: 1px solid var(--fourth-color);
-     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: transparent;
-    color: var(--fourth-color);
-    font-family: 'Roboto';
-    font-size: 12px;
-    letter-spacing: 0.04em;
-    line-height: 1.5;
 }
-
-.footer-mail::placeholder{
-    color: var(--fourth-color)
-}
-
 
 /* =================================== /FOOTER ============================================ */
 /* =================================== BACKDROP ============================================ */
