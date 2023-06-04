@@ -772,6 +772,13 @@ background-color: var(--fifth-color);
         border-color var(--transition-duration-and-function),
         box-shadow var(--transition-duration-and-function); 
 }
+.buttons{
+    padding-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 56px;
+}  
 
 .button-function:hover,
 .button-function:focus {
@@ -781,83 +788,123 @@ background-color: var(--fifth-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 72px
+@media screen and (min-width: 768px) {
+    .buttons {
+        padding-top: 64px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 64px
+        }
+    
 }
 
-.services {
+@media screen and (min-width:1158px) {
+    .buttons {
+        padding-top: 100px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 72px
+        }
+    
+}
+/* ================================================================SERVICE====================================================================== */
+.picture-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--first-color);
+    margin-bottom: 8px;
+}
+
+.picture-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--third-color);
+}
+
+.services-div {
+    padding: 32px 16px;
+    border: 1px solid var(--seventh-color);
+    border-top: none;
+
+}
+
+.services-item {
+/* width: calc((100% - 32px)/1); */
+ width: 360px;
+}
+
+.services{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 24px;
+    flex-direction: column;
+    align-items: center;
     row-gap: 48px;
+    padding-bottom: 48px;
 }
 
 .wraper {
     position: relative;
     overflow: hidden;
 }
-.photo-text {
-        font-family: var(--main-font-family);
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: var(--second-color);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--sixth-color);
-        padding: 40px 32px;
-        overflow: auto;
-        transform: translateY(100%);
-        transition: transform var(--transition-duration-and-function);
-}
- 
 
-.services-item {
-    width: calc((100% - 48px)/3);
-}
-
-.service-link{
+.service-link {
     display: block;
     transition: box-shadow var(--transition-duration-and-function);
 }
 
 .service-link:hover,
-.service-link:focus{
-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+.service-link:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .service-link:hover .photo-text,
-.service-link:focus .photo-text{
+.service-link:focus .photo-text {
     transform: translateY(0%);
 }
-.services-div {
-    padding: 32px 16px;
-    border: 1px solid var(--seventh-color);
-    border-top: none;
+ .photo-text {
+    font-family: var(--main-font-family);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--second-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--sixth-color);
+    padding: 40px 32px;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform var(--transition-duration-and-function);
 }
 
-.picture-name {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: var(--first-color);
-        margin-bottom: 8px;
-    }
-
-.picture-text {
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: var(--third-color);
+@media screen and (min-width:768px) {
+    .services {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;    
+            row-gap: 72px;            
+        }
+    
 }
+
+@media screen and (min-width:1158px) {
+    .services {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 48px;
+            justify-content: space-between;
+        }
+    
+}
+
 
 /* =================================== /MAIN PORTFOLIO ==================================== */
 /* =================================== FOOTER ============================================= */
