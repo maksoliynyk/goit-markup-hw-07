@@ -439,7 +439,7 @@ font-family: 'Roboto';
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
     .first-sect {
-        background-image: url('../images/Studio/work@2x.jpg');
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url('../images/Studio/work@2x.jpg');
     }
 }
 
