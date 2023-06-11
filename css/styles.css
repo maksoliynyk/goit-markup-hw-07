@@ -81,9 +81,12 @@ img {
 @media screen and (min-width: 1158px) {
     .container {
         width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
 
     }
 }
+
 /* ================================== /MAIN SETTINGS ====================================== */
 /* =================================== HEADER ============================================= */
 .page-header {
@@ -101,16 +104,15 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--sixth-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .logo-sec {
     color: var(--second-color);
 }
 
-.page-header{
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
+
 .menu {
     display: none;
 }
@@ -144,6 +146,9 @@ img {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .menu-mobile-but{
@@ -172,15 +177,11 @@ img {
         display: flex;
         flex-direction: column;
         gap: 40px;
-        color: var(--first-color);
-        margin-bottom: 284px;
+
 }
 
-.mobile-links:hover,
-.mobile-links:focus{
-    color: var(--fifth-color);
-}
-.nav-mobile-phone{
+
+.nav-mobile-phone-item{
 font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -188,23 +189,35 @@ font-family: 'Roboto';
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    margin-bottom: 40px;
     display: block;
 }
 
+.nav-mobile-phone{
+    margin-bottom: 40px;
+}
 
-.nav-mobile-mail{
+.menu-nav{
+        color: var(--first-color);
+}
+
+.studio-head {
+    color: var(--fifth-color);
+}
+
+.nav-mobile-mail-item{
     font-family: 'Roboto';
         font-style: normal;
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.02em;
-        margin-bottom: 48px;
         display: block;
         color: var(--third-color);
 }
 
+.nav-mobile-mail{
+        margin-bottom: 48px;
+}
 .mobile-list{
     display: flex;
     align-items: center;
@@ -240,11 +253,16 @@ font-family: 'Roboto';
 
         .contact-list-item {
         font-style: normal;
-        font-size: 16px;
-        line-height: 1.5;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
         letter-spacing: 0.02em;
         color: var(--third-color);
         transition: color var(--transition-duration-and-function);
+           }
+
+           .tab{
+            margin-bottom: 12px;
            }
 
     .menu-nav {
@@ -306,11 +324,6 @@ font-family: 'Roboto';
         .contact-list-item:hover,
         .contact-list-item:focus {
             color: var(--fifth-color);
-        }
-
-        .page-header{
-            padding-top: 16px;
-            padding-bottom: 0;
         }
 
         .contact {
@@ -421,12 +434,18 @@ font-family: 'Roboto';
     margin-right: auto;
 }
 
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .banner {
+        background-image: url('../images/Studio/work@2x.jpg');
+    }
+}
+
 @media screen and (min-width: 768px) {
 
     .first-sect{
-        padding-top: 188px;
-        padding-bottom: 188px;
-        /* max-width: 1440px */
+        max-width: 1440px
     }
 .first-h {
     max-width: 496px;
@@ -436,7 +455,7 @@ font-family: 'Roboto';
     line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;;
-    margin: 0 auto 48px;
+    margin: 0 auto 36px;
 }
 }
 /* =================================== /MAIN STUDIO 1 ====================================== */
@@ -458,6 +477,10 @@ font-family: 'Roboto';
     margin-bottom: 72px;
 }
 
+.advantages-item{
+    margin-bottom: 72px;
+}
+
 .list-advantages{
 font-family: 'Roboto';
     font-weight: 700;
@@ -465,7 +488,6 @@ font-family: 'Roboto';
     line-height: 1.11;
     text-align: center;
     letter-spacing: 0.02em;
-    /* text-transform: capitalize; */
     color: var(--first-color);
     margin-bottom: 8px;
 }
@@ -474,8 +496,6 @@ font-family: 'Roboto';
     font-size: 16px;
     line-height:1.5;
     letter-spacing: 0.02em;
-    margin-bottom: 72px;
-    /* text-transform: capitalize; */
 }
 
 @media screen and (min-width: 768px) {
@@ -494,7 +514,8 @@ font-family: 'Roboto';
         }
 
     .advantages-item {
-        flex-basis: calc((100% - 32px) / 2);
+        flex-basis: calc((100% - 24px) / 2);
+        margin-bottom: 0;
     }
 
     .second-sect {
@@ -671,6 +692,10 @@ background-color: var(--fifth-color);
     .inf-work{
     max-width: 552px;
     }
+
+    .forth-sect-container{
+        max-width: 584px;
+    }
 }
 
 @media screen and (min-width: 1158px) {
@@ -683,10 +708,14 @@ background-color: var(--fifth-color);
 
     .forth-sect {
         padding: 120px 0;
-}
+    }
+        .forth-sect-container {
+                max-width: 1158px;
+            }
 }
 /* =================================== /MAIN STUDIO 4 ====================================== */
 /* =================================== MAIN STUDIO 5 ====================================== */
+
 
 .fifth-sect {
     padding: 96px 0;
@@ -704,7 +733,7 @@ background-color: var(--fifth-color);
 
 .companies-icons {
     height: 88px;
-    flex-basis: calc((100% - 16px) / 2)
+    flex-basis: calc((100% - 24px) / 2);
 }
 
 .icon-link:hover,
@@ -720,7 +749,6 @@ background-color: var(--fifth-color);
     border: 1px solid var(--eighth-color);
     color: var(--eighth-color);
     border-radius: 4px;
-    width: 100%;
     height: 100%;
     transition: border-color var(--transition-duration-and-function), color var(--transition-duration-and-function);
 }
@@ -730,25 +758,35 @@ background-color: var(--fifth-color);
 }
 
 @media screen and (min-width: 768px) {
-    .companies-icons {
-            max-width: 190px;
-        }
-    
+
+    .companies{
+        column-gap: 24px;
+    }
+
+    .fifth-sect-container {
+            max-width: 584px;
+    }
+
+    .companies-icons{
+        max-width: 164px;
+    }
 }
 
 @media screen and (min-width: 1158px) {
-.fifth-sect {
-        padding: 120px 0;
+    .fifth-sect-container{
+        max-width: 1158px;
     }
 
-
-    .companies-icons {
-        max-width: 160px;
-        height: 88px;
+    .fifth-sect {
+        padding: 120px 0;
     }
     
     .companies{
         flex-wrap: nowrap;
+    }
+
+    .companies-icons{
+        max-width: 168px;
     }
 }
 
@@ -920,6 +958,7 @@ background-color: var(--fifth-color);
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 72px;
 }
 
 .footer-logo {
@@ -933,6 +972,9 @@ background-color: var(--fifth-color);
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--second-color);
+}
+
+.right-site{
     margin-bottom: 72px;
 }
 
@@ -951,7 +993,6 @@ background-color: var(--fifth-color);
     display: flex;
     justify-content: center;
     gap: 16px;
-    margin-bottom: 72px;
 }
 
 .footer-social-list-link {
@@ -1031,14 +1072,14 @@ background-color: var(--fifth-color);
     .footer-mail {
             width: 264px;
             display: inline-block;
+            margin-bottom: 0;
         }
     .two-sides{
         display: flex;
         flex-wrap: wrap;
         row-gap: 72px;
         column-gap: 24px;
-        align-items: top;
-        max-width: 552px;
+        max-width: 584px;
     }
 
         .footer-h {
@@ -1048,6 +1089,7 @@ background-color: var(--fifth-color);
 
         .left-side {
         display: block;
+        margin-bottom: 0;
     }
 
         .footer-h{
@@ -1128,7 +1170,7 @@ background-color: var(--fifth-color);
     padding: 72px 24px 24px;
     transform: translate(-50%,-50%);
     min-height: 576px;
-    width: 408px;
+    max-width: 408px;
     background-color: var(--model-color);
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
