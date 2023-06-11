@@ -180,6 +180,7 @@ img {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        flex-wrap: wrap;
 
 }
 
@@ -193,6 +194,7 @@ font-family: 'Roboto';
     letter-spacing: 0.02em;
     text-transform: capitalize;
     display: block;
+    color: var(--sixth-color);
 }
 
 .mobile-navigation{
@@ -456,7 +458,7 @@ font-family: 'Roboto';
     line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;;
-    margin: 0 auto 36px;
+    margin: 0 auto 48px;
 }
 }
 
@@ -1023,7 +1025,8 @@ background-color: var(--fifth-color);
 }
 
 .footer-label {
-    margin-right: 24px;
+    display: block;
+    margin-bottom: 16px;
 }
 
 .footer-mail {
@@ -1040,7 +1043,6 @@ background-color: var(--fifth-color);
     font-size: 12px;
     letter-spacing: 0.04em;
     line-height: 1.5;
-    margin-bottom: 16px;
 }
 
 .subs-button {
@@ -1083,8 +1085,13 @@ background-color: var(--fifth-color);
     .footer-mail {
             width: 264px;
             display: inline-block;
-            margin-bottom: 0;
         }
+
+    .footer-label{
+        margin-bottom: 0;
+        margin-right: 24px;
+    }
+
     .two-sides{
         display: flex;
         flex-wrap: wrap;
